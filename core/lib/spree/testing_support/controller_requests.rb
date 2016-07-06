@@ -85,7 +85,7 @@ module Spree
 
       def process_spree_action(action, parameters = nil, session = nil, flash = nil, method = "GET")
         parameters ||= {}
-        process(action, method, parameters, session, flash)
+        process(action, method: method, params: parameters, session: session, flash: flash)
       end
 
       def process_spree_xhr_action(action, parameters = nil, session = nil, flash = nil, method = :get)
